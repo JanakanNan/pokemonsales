@@ -12,7 +12,7 @@ class DashboardComponent extends Component {
             <div fluid>
                 <Carousel>
                     <CarouselItem>
-                        <img ressponsive alt="900x500" height={150} src="/img/pokexemple.jpg" />
+                        <img ressponsive alt="900x500" height={150} src="/img/waterPoke.png" />
                         <Carousel.Caption>
                             <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
