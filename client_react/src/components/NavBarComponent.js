@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Navbar, Nav, NavItem,FormGroup,FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavItem,FormGroup,FormControl, Button, Glyphicon } from 'react-bootstrap';
 
 import Login from './Login';
 
@@ -43,36 +43,81 @@ class NavBarComponent extends Component {
           </div>
         </div>
         return (
-
-            <Navbar>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <a href="#Home">Pokebuy</a>
-                    </Navbar.Brand>
-                </Navbar.Header>
-                <Navbar.Form pullLeft>
-                    <FormGroup>
-                        <FormControl type="text" placeholder="Search" />
-                    </FormGroup>{' '}
-                    <Button type="submit">Submit</Button>
-                </Navbar.Form>
-                <Nav pullRight>
-                    <NavItem eventKey={1} href='#'>
-                        Shop
-                    </NavItem>
-                    <NavItem eventKey={1} href='#'>
-                        Profile
-                    </NavItem>
-                    <NavItem eventKey={1} href='#'>
-                        Caddie
-                    </NavItem>
-                    <NavItem eventKey={1} href='#'>
-                      {main_content}
-                    </NavItem>
-                </Nav>
-            </Navbar>
+            <div className="navbar container-fluid">
+                <div className="red-bar">
+                    <Navbar.Form pullLeft>
+                        <FormGroup>
+                            <FormControl type="text" placeholder="Search" />
+                        </FormGroup>{' '}
+                        <Button type="submit">Submit</Button>
+                    </Navbar.Form>
+                    <button className="cart">
+                        <Glyphicon glyph={"shopping-cart"}/>
+                    </button>
+                </div>
+                <div className="black-bar">
+                    <ul className={"nav nav-left"}>
+                        <li className="nav-item">
+                            <a eventKey={1} href='#' >Home</a>
+                            <span>//</span>
+                        </li>
+                        <li className="nav-item">
+                            <a eventKey={1} href='#' >Pokémons</a>
+                            <span>//</span>
+                        </li>
+                        <li className="nav-item">
+                            <a eventKey={1} href='#' >Boutique</a>
+                            <span>//</span>
+                        </li>
+                        <li className="nav-item">
+                            <a eventKey={1} href='#' >Voyage</a>
+                            <span>//</span>
+                        </li>
+                        <li className="nav-item">
+                            <a eventKey={1} href='#' >Autre</a>
+                            <span>//</span>
+                        </li>
+                    </ul>
+                    <ul className={"nav nav-right"}>
+                        <li eventKey={1} href='#'>
+                            <a eventKey={1} href='#' >Profile</a>
+                            <span>//</span>
+                        </li>
+                        <li eventKey={1} href='#'>{main_content}
+                        </li>
+                    </ul>
+                </div>
+            </div>
         );
     }
 }
 
 export default NavBarComponent;
+
+// <Navbar>
+//     <Navbar.Header>
+//         <Navbar.Brand>
+//             <a href="#Home">Pokebuy</a>
+//         </Navbar.Brand>
+//     </Navbar.Header>
+//     <Navbar.Form pullLeft>
+//         <FormGroup>
+//             <FormControl type="text" placeholder="Search" />
+//         </FormGroup>{' '}
+//         <Button type="submit">Submit</Button>
+//     </Navbar.Form>
+//     <Nav pullRight>
+//         <NavItem eventKey={1} href='#'>
+//             Shop
+//         </NavItem>
+//         <NavItem eventKey={1} href='#'>
+//             Profile
+//         </NavItem>
+//         <NavItem eventKey={1} href='#'>
+//             Caddie
+//         </NavItem>
+//         <NavItem eventKey={1} href='#'>
+//           {main_content}
+//         </NavItem>
+//     </Nav>
+// </Navbar>
