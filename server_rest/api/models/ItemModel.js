@@ -16,6 +16,10 @@ var ItemSchema = new Schema({
     type: String,
     required: 'Kindly enter the path of the photo'
   },
+  quantite: {
+    type: Number,
+    required: 'Kindly enter the quantity'
+  },
   information: {
     type: String,
     required: 'Kindly enter the item info'
@@ -33,4 +37,4 @@ var ItemSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('items', TaskSchema);
+module.exports = mongoose.model('items', ItemSchema);

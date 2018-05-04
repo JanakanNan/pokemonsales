@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 
-var ItemSchema = new Schema({
+var UserSchema = new Schema({
   name: {
     type: String,
     required: 'Kindly enter the name of the item'
@@ -33,4 +33,4 @@ var ItemSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('items', TaskSchema);
+module.exports = mongoose.model('users', UserSchema);

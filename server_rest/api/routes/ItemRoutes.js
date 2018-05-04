@@ -1,8 +1,8 @@
 'use strict';
 module.exports = function(app) {
-  var todoList = require('../controllers/ItemController');
+  var item = require('../controllers/ItemController');
 
-  // todoList Routes
+  // item Routes
   app.route('/items')
     .get(item.list_all_items)
     .post(item.create_a_items);
