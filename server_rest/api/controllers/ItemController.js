@@ -11,11 +11,11 @@ exports.list_all_items = function(req, res) {
 };
 
 exports.create_a_items = function(req, res) {
-  var new_item = new Items(req.body);
+  var new_item = new Item(req.body);
   new_item.save(function(err, item) {
     if (err)
       res.send(err);
-    res.jso, (item);
+    res.json(item);
   });
 };
 
