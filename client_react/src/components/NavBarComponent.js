@@ -43,8 +43,7 @@ class NavBarComponent extends Component {
           </div>
         </div>
         return (
-<<<<<<< HEAD
-
+            <div>
             <Navbar>
                 <Navbar.Header>
                     <Navbar.Brand>
@@ -72,7 +71,7 @@ class NavBarComponent extends Component {
                     </NavItem>
                 </Nav>
             </Navbar>
-=======
+
             <div className="navbar fluid">
                 <div className="red-bar">
                     <Navbar.Form pullLeft>
@@ -120,36 +119,13 @@ class NavBarComponent extends Component {
                     </ul>
                 </div>
             </div>
+<<<<<<< 343f7cc6efcfcf87b89919aa8cec81ead1c7d10a
+=======
+            </div>
+
+>>>>>>> dernier modif bis
         );
     }
 }
 
 export default NavBarComponent;
-
-// <Navbar>
-//     <Navbar.Header>
-//         <Navbar.Brand>
-//             <a href="#Home">Pokebuy</a>
-//         </Navbar.Brand>
-//     </Navbar.Header>
-//     <Navbar.Form pullLeft>
-//         <FormGroup>
-//             <FormControl type="text" placeholder="Search" />
-//         </FormGroup>{' '}
-//         <Button type="submit">Submit</Button>
-//     </Navbar.Form>
-//     <Nav pullRight>
-//         <NavItem eventKey={1} href='#'>
-//             Shop
-//         </NavItem>
-//         <NavItem eventKey={1} href='#'>
-//             Profile
-//         </NavItem>
-//         <NavItem eventKey={1} href='#'>
-//             Caddie
-//         </NavItem>
-//         <NavItem eventKey={1} href='#'>
-//           {main_content}
-//         </NavItem>
-//     </Nav>
-// </Navbar>
