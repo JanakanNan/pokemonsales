@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter, Route} from 'react-router-dom';
 
-import { Grid } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 
 import NavBarComponent from './components/NavBarComponent';
