@@ -16,18 +16,45 @@ class App extends Component {
 		<body>
             <NavBarComponent/>
             <CarouselComponent/>
-			<HotSalesComponent/>
-			<Grid>
+			<div className="hot-sales-container">
 				<Row>
-					<div className={"dash-Item"}>
+					<Col xs={12} md={4}>
+						<HotSalesComponent/>
+					</Col>
+					<Col xs={12} md={4}>
+						<HotSalesComponent/>
+					</Col>
+					<Col xs={12} md={4}>
+						<HotSalesComponent/>
+					</Col>
+				</Row>
+				<div className={"dash-Item"}>
+					<Row>
+						<h2>Nouveautés</h2>
+					</Row>
+				<Row>
+
 						<Col md={2}>
 							<ItemComponent/>
 						</Col>
-					</div>
+						<Col xs={12} md={2}>
+							<ItemComponent/>
+						</Col>
+						<Col md={2}>
+							<ItemComponent/>
+						</Col>
+						<Col md={2}>
+							<ItemComponent/>
+						</Col>
+						<Col md={2}>
+							<ItemComponent/>
+						</Col>
+						<Col md={2}>
+							<ItemComponent/>
+						</Col>
 				</Row>
-			</Grid>
-
-
+				</div>
+			</div>
         </body>
     );
   }
