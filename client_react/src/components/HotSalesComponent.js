@@ -9,33 +9,12 @@ class DashboardComponent extends Component {
 
     render() {
         return (
-            <div className={"fluid"}>
-                <Grid>
-                    <Row>
-                        <Col md={4}>
-                            <Panel>
-                                <Panel.Body>
-                                    Basic panel example
-                                </Panel.Body>
-                            </Panel>
-                        </Col>
-                        <Col md={4}>
-                            <Panel>
-                                <Panel.Body>
-                                    Basic panel example
-                                </Panel.Body>
-                            </Panel>
-                        </Col>
-                        <Col md={4}>
-                            <Panel>
-                                <Panel.Body>
-                                    Basic panel example
-                                </Panel.Body>
-                            </Panel>
-                        </Col>
-                    </Row>
-                </Grid>
-            </div>
+                <Panel className={"hot-sales"}>
+                    <Panel.Body>
+                        <h2>Ne manquez pas nos promotions légendaires</h2>
+                        <img src="/img/pokexemple.jpg" alt=""/>
+                    </Panel.Body>
+                </Panel>
         );
     }
 }
