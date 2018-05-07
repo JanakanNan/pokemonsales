@@ -43,7 +43,7 @@ class NavBarComponent extends Component {
           </div>
         </div>
         return (
-            <div className="navbar container-fluid">
+            <div className="navbar fluid">
                 <div className="red-bar">
                     <Navbar.Form pullLeft>
                         <FormGroup>
@@ -75,15 +75,17 @@ class NavBarComponent extends Component {
                         </li>
                         <li className="nav-item">
                             <a eventKey={1} href='#' >Autre</a>
-                            <span>//</span>
                         </li>
                     </ul>
+                    <div className="logo-container">
+                        <img className={"logo"} src="/img/pokesales.png" alt=""/>
+                    </div>
                     <ul className={"nav nav-right"}>
-                        <li eventKey={1} href='#'>
+                        <li>
                             <a eventKey={1} href='#' >Profile</a>
-                            <span>//</span>
                         </li>
-                        <li eventKey={1} href='#'>{main_content}
+                        <li>
+                            <span>//</span>{main_content}
                         </li>
                     </ul>
                 </div>

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import { Grid } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 
 import NavBarComponent from './components/NavBarComponent';
-import DashbordComponent from './components/DashboardComponent';
+import CarouselComponent from './components/CarouselComponent';
+import HotSalesComponent from './components/HotSalesComponent';
+import ItemComponent from "./components/ItemComponent";
 
 class App extends Component {
 	
@@ -13,7 +15,18 @@ class App extends Component {
 		return (
 		<body>
             <NavBarComponent/>
-            <DashbordComponent/>
+            <CarouselComponent/>
+			<HotSalesComponent/>
+			<Grid>
+				<Row>
+					<div className={"dash-Item"}>
+						<Col md={2}>
+							<ItemComponent/>
+						</Col>
+					</div>
+				</Row>
+			</Grid>
+
 
         </body>
     );

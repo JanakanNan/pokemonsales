@@ -3,41 +3,27 @@ import React, { Component } from 'react';
 import { Carousel, CarouselItem, Grid, Row, Col } from 'react-bootstrap';
 
 
-class DashboardComponent extends Component {
+class CarouselComponent extends Component {
 
 
 
     render() {
         return (
-            <div fluid>
+            <div className={"fluid"}>
                 <Carousel>
+                    {/*TODO Dynamic CarouselItems*/}
                     <CarouselItem>
                         <img ressponsive alt="900x500" height={150} src="/img/waterPoke.png" />
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
+                            <h2>Partez à l'aventure</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
                     </CarouselItem>
+                    {/*END TODO*/}
                 </Carousel>
-                <Grid>
-                    <Row>
-                        <Col md={4}>
-
-                        </Col>
-                        <Col md={4}>
-
-                        </Col>
-                        <Col md={4}>
-
-                        </Col>
-                        <Col md={4}>
-
-                        </Col>
-                    </Row>
-                </Grid>
             </div>
         );
     }
 }
 
-export default DashboardComponent;
+export default CarouselComponent;
