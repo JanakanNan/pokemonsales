@@ -6,11 +6,10 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 
 import NavBarComponent from './components/NavBarComponent';
-import ItemformComponent from './components/ItemformComponent';
-
 import CarouselComponent from './components/CarouselComponent';
-import HotSalesComponent from './components/HotSalesComponent';
 import ItemComponent from "./components/ItemComponent";
+import ItemformComponent from './components/ItemformComponent';
+import HotSalesComponent from './components/HotSalesComponent';
 
 
 class App extends Component {
