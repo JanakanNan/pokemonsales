@@ -6,18 +6,14 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 
 import NavBarComponent from './components/NavBarComponent';
-import CarouselComponent from './components/CarouselComponent';
 import ItemComponent from "./components/ItemComponent";
 import ItemformComponent from './components/ItemformComponent';
-import HotSalesComponent from './components/HotSalesComponent';
-import Login from './components/Login';
-
+import DashboardComponent from "./components/DashBoardComponent";
 
 class App extends Component {
 
 	render() {
 		return (
-		<BrowserRouter>
 					<body>
 			            <NavBarComponent/>
 									<div>
@@ -61,19 +57,15 @@ class App extends Component {
 										<ItemComponent/>
 									</Col>
 							</Row>
-<<<<<<< a8d14a8fd3a156d20f84366480bf13c38a8dfbbd
 						</Grid>
 					</div>
 				</BrowserRouter>
 				</div>
 			</div>
         </body>
-=======
 							</div>
-						</div>
+						</BrowserRouter>
 			        </body>
-		</BrowserRouter>
->>>>>>> Mise en place du route profile et boutique
     );
   }
 }
