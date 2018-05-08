@@ -87,7 +87,7 @@ class NavBarComponent extends Component {
                 <div className="black-bar">
                     <ul className={"nav nav-left"}>
                         <li className="nav-item">
-                            <a eventKey={1} href='#' >Home</a>
+                            <a eventKey={1} href='/' >Home</a>
                             <span>//</span>
                         </li>
                         <li className="nav-item">
@@ -95,7 +95,7 @@ class NavBarComponent extends Component {
                             <span>//</span>
                         </li>
                         <li className="nav-item">
-                            <a eventKey={1} href='#' >Boutique</a>
+                            <a eventKey={1} href='/boutique' >Boutique</a>
                             <span>//</span>
                         </li>
                         <li className="nav-item">
@@ -111,7 +111,7 @@ class NavBarComponent extends Component {
                     </div>
                     <ul className={"nav nav-right"}>
                         <li>
-                            <a eventKey={1} href='#' >Profile</a>
+                            <a eventKey={1} href='/profile' >Profile</a>
                         </li>
                         <li>
                             <span>//</span>{main_content}

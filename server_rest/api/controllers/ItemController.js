@@ -31,7 +31,7 @@ exports.update_a_item = function(req, res) {
   Item.findOneAndUpdate({_id: req.param, itemId}, req.body, {new: true}, function(err, item) {
     if (err)
       res.send(err);
-    res.jso, (item);
+    res.json, (item);
   });
 };
 
