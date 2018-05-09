@@ -14,7 +14,7 @@ class App extends Component {
 
 	render() {
 		return (
-					<body>
+					<div>
 			            <NavBarComponent/>
 									<div>
 							      <Route path="/profile" component={ItemformComponent} exact={true} strict={true}/>
@@ -65,7 +65,7 @@ class App extends Component {
         </body>
 							</div>
 						</BrowserRouter>
-			        </body>
+			    </div>
     );
   }
 }
