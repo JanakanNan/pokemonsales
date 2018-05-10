@@ -5,47 +5,29 @@ import { BrowserRouter, Route} from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 
-import CarouselComponent from "./components/CarouselComponent";
-import HotSalesComponent from "./components/HotSalesComponent";
-import NavBarComponent from "./components/NavBarComponent";
+import NavBarComponent from './components/NavBarComponent';
 import ItemComponent from "./components/ItemComponent";
-import ItemformComponent from "./components/ItemformComponent";
+import ItemformComponent from './components/ItemformComponent';
+import DashboardComponent from "./components/DashBoardComponent";
+import FooterComponent from "./components/FooterComponent";
 
 class App extends Component {
 
-	render() {
-		return (
+    render() {
+        return (
+			<body>
+			<NavBarComponent/>
+			<BrowserRouter>
 				<div>
-	        <NavBarComponent/>
-					<BrowserRouter>
-						<div>
-				      <Route path="/profile" component={ItemformComponent} exact={true} strict={true}/>
-				      <Route path="/boutique" component={ItemComponent} exact={true} strict={true}/>
-						</div>
-					</BrowserRouter>
-	        <CarouselComponent/>
-					<div className="hot-sales-container">
-						<Row>
-							<Col xs={12} md={4}>
-								<HotSalesComponent/>
-							</Col>
-							<Col xs={12} md={4}>
-								<HotSalesComponent/>
-							</Col>
-							<Col xs={12} md={4}>
-								<HotSalesComponent/>
-							</Col>
-						</Row>
-						<div className={"dash-Item"}>
-							<Row>
-								<h2>Nouveautés</h2>
-							</Row>
-							<ItemComponent/>
-						</div>
-					</div>
+					<Route path="/home" component={DashboardComponent} exact={false} strict={false}/>
+					<Route path="/profile" component={ItemformComponent} exact={true} strict={true}/>
+					<Route path="/boutique" component={ItemComponent} exact={false} strict={false}/>
 				</div>
-    );
-  }
+			</BrowserRouter>
+			<FooterComponent/>
+			</body>
+        );
+    }
 }
 
 export default App;

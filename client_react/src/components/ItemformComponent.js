@@ -46,34 +46,36 @@ class ItemformComponent extends React.Component {
   
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
-        <label>
-          Name:
-          <input type="text" value={this.state.valueName} onChange={this.handleChangeName.bind(this)} />
-        </label>
-        <br/>
-        <label>
-          Prix:
-          <input type="text" value={this.state.valuePrix} onChange={this.handleChangePrix.bind(this)} />
-        </label>
-        <br/>
-        <label>
-          Photo:
-          <input type="text" value={this.state.valuePhoto} onChange={this.handleChangePhoto.bind(this)} />
-        </label>
-        <br/>
-        <label>
-          Quantite:
-          <input type="text" value={this.state.valueQuantite} onChange={this.handleChangeQuantite.bind(this)} />
-        </label>
-        <br/>
-        <label>
-          Information:
-          <input type="text" value={this.state.valueInformation} onChange={this.handleChangeInformation.bind(this)} />
-        </label>
-        <br/>
-        <input type="submit" value="Submit" />
-      </form>
+        <div className="item-form">
+            <form onSubmit={this.handleSubmit.bind(this)}>
+                <label>
+                    Name:
+                    <input type="text" value={this.state.valueName} onChange={this.handleChangeName.bind(this)} />
+                </label>
+                <br/>
+                <label>
+                    Prix:
+                    <input type="text" value={this.state.valuePrix} onChange={this.handleChangePrix.bind(this)} />
+                </label>
+                <br/>
+                <label>
+                    Photo:
+                    <input type="text" value={this.state.valuePhoto} onChange={this.handleChangePhoto.bind(this)} />
+                </label>
+                <br/>
+                <label>
+                    Quantite:
+                    <input type="text" value={this.state.valueQuantite} onChange={this.handleChangeQuantite.bind(this)} />
+                </label>
+                <br/>
+                <label>
+                    Information:
+                    <input type="text" value={this.state.valueInformation} onChange={this.handleChangeInformation.bind(this)} />
+                </label>
+                <br/>
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
     );
   }
 }

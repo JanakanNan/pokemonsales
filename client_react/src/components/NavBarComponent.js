@@ -43,35 +43,6 @@ class NavBarComponent extends Component {
           </div>
         </div>
         return (
-            <div>
-            <Navbar>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <a href="#Home">Pokebuy</a>
-                    </Navbar.Brand>
-                </Navbar.Header>
-                <Navbar.Form pullLeft>
-                    <FormGroup>
-                        <FormControl type="text" placeholder="Search" />
-                    </FormGroup>{' '}
-                    <Button type="submit">Submit</Button>
-                </Navbar.Form>
-                <Nav pullRight>
-                    <NavItem eventKey={1} href='#'>
-                        Shop
-                    </NavItem>
-                    <NavItem eventKey={1} href='/profile'>
-                        Profile
-                    </NavItem>
-                    <NavItem eventKey={1} href='#'>
-                        Caddie
-                    </NavItem>
-                    <NavItem eventKey={1} href='#'>
-                      {main_content}
-                    </NavItem>
-                </Nav>
-            </Navbar>
-
             <div className="navbar fluid">
                 <div className="red-bar">
                     <Navbar.Form pullLeft>
@@ -119,7 +90,6 @@ class NavBarComponent extends Component {
                     </ul>
                 </div>
             </div>
-          </div>
         );
     }
 }

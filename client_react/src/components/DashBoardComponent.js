@@ -7,7 +7,7 @@ import ItemComponent from './ItemComponent';
 
 
 
-class App extends Component {
+class DashBoardComponent extends Component {
 
     render() {
         return (
@@ -57,4 +57,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default DashBoardComponent;
