@@ -119,11 +119,7 @@ class NavBarComponent extends Component {
                     </ul>
                 </div>
             </div>
-<<<<<<< 343f7cc6efcfcf87b89919aa8cec81ead1c7d10a
-=======
-            </div>
-
->>>>>>> dernier modif bis
+          </div>
         );
     }
 }

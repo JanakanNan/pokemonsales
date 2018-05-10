@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { Grid, Row, Col, Panel } from 'react-bootstrap';
+import { getItems } from '../services/ItemService';
 
 
 class ItemComponent extends Component {
@@ -13,51 +14,48 @@ class ItemComponent extends Component {
     }
   }
 
-  componentDidMont(){
 
-    fetch('https://facebook.github.io/react-native/movies.json').
-    then((Response)=>Response.json()).
+
+  componentDidMount(){
+    getItems().
     then((findreponse)=>
     {
-      console.log(findreponse.movies)
+      console.log(findreponse)
       this.setState({
-        data:findreponse.movies,
+        data:findreponse,
       })
     })
   }
 
     render() {
         return (
-          <div>
-              {
-                this.state.data.map((dynamicData,key)=>
-                <div>
-                  {dynamicData.title}
-                </div>
-                )
-              }
-            <div className={"fluid"}>
-                <Panel>
-                    <div className="item-name">
-                        <h3>{
-                          this.state.data.map((dynamicData,key)=>
-                          <div>
-                            {dynamicData.title}
+          <Row>
+            <Col md={12}>{
+              this.state.data.map((dynamicData,key)=>
+              <div className={"fluid"}>
+                <Col md={2}>
+                  <Panel>
+                      <div className="item-name">
+                          <div key={key}>
+                              <h3>
+                                {dynamicData.name}
+                              </h3>
+                              <p>{dynamicData.information}</p>
+                              <div className="item-price">
+                                  <h4>{dynamicData.prix} €</h4>
+                              </div>
+                              <Panel.Body>
+                                  <img src="/img/pokeball.jpg" alt="Item"/>
+                              </Panel.Body>
                           </div>
-                          )
-                        }</h3>
-                        <p>blablabla</p>
                     </div>
-                    <div className="item-price">
-                        <h4>3P</h4>
-                    </div>
-                    <Panel.Body>
-                        <img src="/img/pokeball.jpg" alt="Item"/>
-                    </Panel.Body>
-                </Panel>
-            </div>
-        </div>
-
+                  </Panel>
+                  </Col>
+                </div>
+              )
+            }
+            </Col>
+          </Row>
         );
     }
 }

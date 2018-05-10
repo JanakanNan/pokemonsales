@@ -6,7 +6,7 @@ exports.list_all_items = function(req, res) {
   Item.find({}, function(err, item) {
     if (err)
       res.send(err);
-    res.json(task);
+    res.json(item);
   });
 };
 

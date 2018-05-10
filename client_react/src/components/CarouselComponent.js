@@ -13,7 +13,7 @@ class CarouselComponent extends Component {
                 <Carousel>
                     {/*TODO Dynamic CarouselItems*/}
                     <CarouselItem>
-                        <img ressponsive alt="900x500" height={150} src="/img/waterPoke.png" />
+                        <img responsive="true" alt="900x500" height={150} src="/img/waterPoke.png" />
                         <Carousel.Caption>
                             <h2>Partez à l'aventure</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
