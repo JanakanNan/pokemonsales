@@ -15,7 +15,7 @@ class App extends Component {
 
     render() {
         return (
-			<body>
+			<div className={"body"}>
 			<NavBarComponent/>
 			<BrowserRouter>
 				<div>
@@ -25,7 +25,7 @@ class App extends Component {
 				</div>
 			</BrowserRouter>
 			<FooterComponent/>
-			</body>
+			</div>
         );
     }
 }
