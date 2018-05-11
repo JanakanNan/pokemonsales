@@ -1,23 +1,33 @@
 import React, { Component } from 'react';
 import './App.css';
+import { BrowserRouter, Route} from 'react-router-dom';
 
-import { Grid } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 
 import NavBarComponent from './components/NavBarComponent';
-import DashbordComponent from './components/DashboardComponent';
+import ItemComponent from "./components/ItemComponent";
+import ItemformComponent from './components/ItemformComponent';
+import DashboardComponent from "./components/DashBoardComponent";
+import FooterComponent from "./components/FooterComponent";
 
 class App extends Component {
-	
-	render() {
-		return (
-		<body>
-            <NavBarComponent/>
-            <DashbordComponent/>
 
-        </body>
-    );
-  }
+    render() {
+        return (
+			<div className={"body"}>
+			<NavBarComponent/>
+			<BrowserRouter>
+				<div>
+					<Route path="/" component={DashboardComponent} exact={true} strict={true}/>
+					<Route path="/profile" component={ItemformComponent} exact={true} strict={true}/>
+					<Route path="/boutique" component={ItemComponent} exact={false} strict={true}/>
+				</div>
+			</BrowserRouter>
+			<FooterComponent/>
+			</div>
+        );
+    }
 }
 
 export default App;

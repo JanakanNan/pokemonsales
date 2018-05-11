@@ -1,28 +1,311 @@
-.App {
-  text-align: center;
+.body{
+    font-family: Montserrat;
+    background-color: lightgray;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.container{
+    margin: 0;
+    padding: 0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+h2{
+    margin-top: 0;
 }
 
-.App-title {
-  font-size: 1.5em;
+
+/*=========================
+============NAV============
+==========================*/
+
+.nav>li{
+    display: flex;
+    align-items: center;
 }
 
-.App-intro {
-  font-size: large;
+@media screen and (max-width: 1280px){
+    .black-bar>.nav>li{
+        display: none;
+    }
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.nav>li>a{
+    color: white;
 }
+
+.nav>li>a:hover{
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.google-login{
+    border: 0;
+    background-color: transparent;
+}
+.google-login:hover{
+    text-decoration: underline;
+}
+
+
+.navbar{
+    padding: 0;
+    margin-bottom: 0;
+    border: 0;
+    height: auto;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    z-index: 10;
+}
+
+.logo-container{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    align-self: center;
+    width: 0;
+    height: 0;
+    left: 50%;
+}
+
+.logo{
+    position: relative;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    max-height: 25vh;
+}
+
+.red-bar{
+    padding: 0 20px 0 10px;
+    width: 100%;
+    background-color: #ce1a19;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+}
+.form-control{
+    border-radius: 40px;
+    position: relative;
+    bottom: 0;
+}
+
+
+button.cart{
+    border: 0;
+    background-color: transparent;
+    color: white;
+    float: right;
+    font-size: 2.5em;
+}
+
+.black-bar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #3a3a3a;
+    width: 100%;
+    min-height: 30px;
+    color: white;
+}
+
+
+/*=========================
+==========FOOTER===========
+==========================*/
+
+.white-bar{
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: white;
+    width: 100%;
+    min-height: 20vh;
+    box-shadow: 14px 0 28px rgba(0,0,0,0.25), 10px 0 10px rgba(0,0,0,0.22);
+
+}
+
+.nav-bottom-left > li > a{
+    color: black;
+}
+
+/*=========================
+=========CAROUSEL==========
+==========================*/
+
+.carousel-caption{
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 0;
+    height: 25%;
+    background-color: rgba(0,0,0,0.5)
+}
+
+@media screen and (max-width: 640px){
+    .carousel-caption{
+        height: 100%;
+        padding: 2em 2em 2em 2em;
+        font-size: 0.7em;
+    }
+}
+
+.carousel{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+/*=========================
+===========PANEL==========
+==========================*/
+
+.panel{
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.panel-body{
+    padding: 0;
+}
+/*=========================
+===========HOT============
+==========================*/
+
+@media screen and (min-width: 640px){
+    .hot-sales-container{
+        padding: 3em 10em 0 10em;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .hot-sales-container{
+        padding: 3em 1em 0 1em;
+    }
+}
+.hot-sales{
+    background-color: white;
+    text-align: center;
+    border-color: lightslategrey;
+    cursor: pointer;
+    margin-bottom: 3em;
+}
+
+.hot-sales .panel-body{
+    display: flex;
+    min-height: 18vh;
+}
+
+@media(min-width: 1280px){
+    .hot-sales .panel-body{
+        min-height: 30vh;
+    }
+}
+.hot-sales:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.hot-sales img{
+    width: 100%;
+    opacity: 0.8;
+    position: absolute;
+}
+
+@media(orientation: landscape){
+    .hot-sales img{
+        height: 100%;
+        opacity: 0.8;
+        position: absolute;
+    }
+}
+.hot-sales h2{
+    z-index: 10;
+    align-self:center ;
+    margin: 0 1em 0 1em;
+}
+
+@media screen and (max-width: 1280px){
+    .hot-sales h2{
+        font-size: 1.2em;
+    }
+}
+
+
+/*=========================
+===========ITEM==========
+==========================*/
+
+
+.hide-smooth{
+    width: 100%;
+}
+
+.dash-Item{
+    flex: 1;
+    margin-bottom: 3em;
+}
+
+.dash-Item img{
+    width: 100%;
+}
+
+@media screen and (max-width: 640px){
+    .dash-Item .panel{
+        margin-bottom: 2em;
+    }
+}
+
+.item-name{
+    position: absolute;
+    background-color: rgba(255,0,0,0.5);
+    height: 70%;
+    width: 100%;
+    padding: 0 1em 0 1em;
+    left:100%;
+    transition: 100ms;
+}
+
+.panel:hover .item-name{
+    left:0;
+}
+
+
+/*=========================
+========ITEM FORM=========
+==========================*/
+
+.item-form{
+    display: flex;
+    flex: 1;
+    padding: 3em 10em 3em 10em;
+}
+
+@media screen and (max-width: 640px){
+    .item-form{
+        padding: 3em 1em 0 1em;
+    }
+}
+
+.panel:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.item-price{
+    position: absolute;
+    background-color: rgba(255,255,255,0.5);
+    width: 100%;
+    height: 30%;
+    padding: 0 1em 0 1em;
+    margin-top: 63%;
+    text-align: right;
+    right: 100%;
+    transition: 100ms;
+}
+.panel:hover .item-price{
+    right:0;
+}
+
