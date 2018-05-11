@@ -6,7 +6,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 
 import NavBarComponent from './components/NavBarComponent';
-import ItemComponent from "./components/ItemComponent";
+import ShopComponent from './components/ShopComponent';
 import ItemformComponent from './components/ItemformComponent';
 import DashboardComponent from "./components/DashBoardComponent";
 import FooterComponent from "./components/FooterComponent";
@@ -21,7 +21,7 @@ class App extends Component {
 				<div>
 					<Route path="/" component={DashboardComponent} exact={true} strict={true}/>
 					<Route path="/profile" component={ItemformComponent} exact={true} strict={true}/>
-					<Route path="/boutique" component={ItemComponent} exact={false} strict={true}/>
+					<Route path="/boutique" component={ShopComponent} exact={false} strict={true}/>
 				</div>
 			</BrowserRouter>
 			<FooterComponent/>
