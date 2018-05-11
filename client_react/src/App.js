@@ -10,6 +10,7 @@ import ShopComponent from './components/ShopComponent';
 import ItemformComponent from './components/ItemformComponent';
 import DashboardComponent from "./components/DashBoardComponent";
 import FooterComponent from "./components/FooterComponent";
+import ItemComponent from "./components/ItemComponent";
 
 class App extends Component {
 
@@ -20,8 +21,8 @@ class App extends Component {
 			<BrowserRouter>
 				<div>
 					<Route path="/" component={DashboardComponent} exact={true} strict={true}/>
-					<Route path="/profile" component={ItemformComponent} exact={true} strict={true}/>
-					<Route path="/boutique" component={ShopComponent} exact={false} strict={true}/>
+					<Route path="/newitem" component={ItemformComponent} exact={true} strict={true}/>
+					<Route path="/boutique" component={ItemComponent} exact={false} strict={true}/>
 				</div>
 			</BrowserRouter>
 			<FooterComponent/>

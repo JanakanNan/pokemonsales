@@ -43,7 +43,7 @@ class ItemformComponent extends React.Component {
       });
       event.preventDefault();
   }
-  
+
   render() {
     return (
         <div className="item-form">

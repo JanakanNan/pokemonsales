@@ -10,8 +10,8 @@ function getItems() {
   return axios.get(url, { headers: { Authorization: `${getAccessToken()}` }}).then((response) => response.data);
 }
 
-function getItem(taskId) {
-  const url = `${BASE_URL}/items/`+taskId;
+function getItem(itemId) {
+  const url = `${BASE_URL}/items/`+itemId;
   return axios.get(url, { headers: { Authorization: `${getAccessToken()}` }}).then((response) => response.data);
 }
 

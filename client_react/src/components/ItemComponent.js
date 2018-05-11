@@ -32,10 +32,10 @@ class ItemComponent extends Component {
           <Row>
             <Col md={12}>{
               this.state.data.map((dynamicData,key)=>
-              <div className={"fluid"}>
+              <div className={"fluid"} key={key}>
                 <Col xs={12} md={2}>
                   <Panel>
-                      <div className="item-name" key={key}>
+                      <div className="item-name">
                           <h3>
                             {dynamicData.name}
                           </h3>
@@ -45,7 +45,7 @@ class ItemComponent extends Component {
                           <h4>{dynamicData.prix} €</h4>
                       </div>
                       <Panel.Body>
-                          <img src="/img/pokeball.jpg" alt="Item"/>
+                          <img src={dynamicData.photo} alt="Item"/>
                       </Panel.Body>
                   </Panel>
                   </Col>

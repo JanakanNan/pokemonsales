@@ -20,7 +20,7 @@ exports.create_a_items = function(req, res) {
 };
 
 exports.read_a_item = function(req, res) {
-  Item.findById(req.param, itemId, function(err, item) {
+  Item.findById(req.param, res, function(err, item) {
     if (err)
       res.send(err);
     res.jso, (item);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { Navbar, Nav, NavItem,FormGroup,FormControl, Button, Glyphicon } from 'react-bootstrap';
+import { getItem, getItems } from '../services/ItemService';
 
 import Login from './Login';
 
@@ -34,22 +35,52 @@ class NavBarComponent extends Component {
             return localStorage.getItem("ACCESS_TOKEN_KEY")!==null;
         }
 
+        handleSearchValue(event) {
+          this.setState({searchValue: event.target.value});
+        }
+
+        handleSubmits(event) {
+            getItems().
+            then((findreponseAllItems)=>
+            {
+              console.log(findreponseAllItems[0]._id);
+              if(findreponseAllItems[0].name === this.state.searchValue){
+                getItem(findreponseAllItems[0]._id).
+                then((findreponseItem)=>
+              {
+                console.log(findreponseItem);
+                this.setState({
+                  data: findreponseItem,
+                })
+              });
+            } else {
+              console.log("erreur");
+            }
+          });
+          event.preventDefault();
+        }
+
 
     render() {
       const main_content= !this.isLogin() ? <Login updateInfo={this.updateLoginInfo.bind(this)}/>:
         <div>
-          <div className="userinfo">
-            <a href="#" onClick={this.logout.bind(this)} >déconnection</a>
-          </div>
+          <ul className={"nav nav-right"}>
+              <li><a href="/" onClick={this.logout.bind(this)} >Déconnection</a></li>
+              <li>
+                  //{main_content}
+              </li>
+              <li><a href="/newitem">Nouveau produit</a></li>
+          </ul>
         </div>
         return (
+            <div>
             <div className="navbar fluid">
                 <div className="red-bar">
                     <Navbar.Form pullLeft>
-                        <FormGroup>
-                            <FormControl type="text" placeholder="Search" />
-                        </FormGroup>{' '}
-                        <Button type="submit">Submit</Button>
+                        <form onSubmit={this.handleSubmits.bind(this)}>
+                            <input type="text" value={this.state.searchValue} onChange={this.handleSearchValue.bind(this)} placeholder="Search" />
+                            <input type="submit" value="Submit" />
+                        </form>{' '}
                     </Navbar.Form>
                     <button className="cart">
                         <Glyphicon glyph={"shopping-cart"}/>
@@ -82,14 +113,12 @@ class NavBarComponent extends Component {
                     </div>
                     <ul className={"nav nav-right"}>
                         <li>
-                            <a eventKey={1} href='/profile' >Profile</a>
-                        </li>
-                        <li>
-                            <span>//</span>{main_content}
+                            {main_content}
                         </li>
                     </ul>
                 </div>
             </div>
+          </div>
         );
     }
 }
