@@ -29,26 +29,7 @@ class DashBoardComponent extends Component {
                         <Row>
                             <h2>Nouveautés</h2>
                         </Row>
-                        <Row>
-                            <Col md={2}>
-                                <ItemComponent/>
-                            </Col>
-                            <Col xs={12} md={2}>
-                                <ItemComponent/>
-                            </Col>
-                            <Col md={2}>
-                                <ItemComponent/>
-                            </Col>
-                            <Col md={2}>
-                                <ItemComponent/>
-                            </Col>
-                            <Col md={2}>
-                                <ItemComponent/>
-                            </Col>
-                            <Col md={2}>
-                                <ItemComponent/>
-                            </Col>
-                        </Row>
+                            <ItemComponent/>
                     </div>
                 </div>
             </div>

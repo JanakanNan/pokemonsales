@@ -33,22 +33,20 @@ class ItemComponent extends Component {
             <Col md={12}>{
               this.state.data.map((dynamicData,key)=>
               <div className={"fluid"}>
-                <Col md={2}>
+                <Col xs={12} md={2}>
                   <Panel>
-                      <div className="item-name">
-                          <div key={key}>
-                              <h3>
-                                {dynamicData.name}
-                              </h3>
-                              <p>{dynamicData.information}</p>
-                              <div className="item-price">
-                                  <h4>{dynamicData.prix} €</h4>
-                              </div>
-                              <Panel.Body>
-                                  <img src="/img/pokeball.jpg" alt="Item"/>
-                              </Panel.Body>
-                          </div>
-                    </div>
+                      <div className="item-name" key={key}>
+                          <h3>
+                            {dynamicData.name}
+                          </h3>
+                          <p>{dynamicData.information}</p>
+                      </div>
+                      <div className="item-price">
+                          <h4>{dynamicData.prix} €</h4>
+                      </div>
+                      <Panel.Body>
+                          <img src="/img/pokeball.jpg" alt="Item"/>
+                      </Panel.Body>
                   </Panel>
                   </Col>
                 </div>
