@@ -48,30 +48,56 @@ class ItemformComponent extends React.Component {
     return (
         <div className="item-form">
             <form onSubmit={this.handleSubmit.bind(this)}>
-                <label>
-                    Name:
-                    <input type="text" value={this.state.valueName} onChange={this.handleChangeName.bind(this)} />
-                </label>
-                <br/>
-                <label>
-                    Prix:
-                    <input type="text" value={this.state.valuePrix} onChange={this.handleChangePrix.bind(this)} />
-                </label>
-                <br/>
-                <label>
-                    Photo:
-                    <input type="file" value={this.state.valuePhoto} onChange={this.handleChangePhoto.bind(this)} />
-                </label>
-                <br/>
-                <label>
-                    Quantite:
-                    <input type="text" value={this.state.valueQuantite} onChange={this.handleChangeQuantite.bind(this)} />
-                </label>
-                <br/>
-                <label>
-                    Information:
-                    <input type="text" value={this.state.valueInformation} onChange={this.handleChangeInformation.bind(this)} />
-                </label>
+                <tr>
+                    <th>
+                        <label>
+                            Name:
+                        </label>
+                    </th>
+                    <td>
+                        <input type="text" value={this.state.valueName} onChange={this.handleChangeName.bind(this)} />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label>
+                            Prix:
+                        </label>
+                    </th>
+                    <td>
+                        <input type="text" value={this.state.valuePrix} onChange={this.handleChangePrix.bind(this)} />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label>
+                            Photo:
+                        </label>
+                    </th>
+                    <td>
+                        <input type="file" value={this.state.valuePhoto} onChange={this.handleChangePhoto.bind(this)} />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label>
+                            Quantite:
+                        </label>
+                    </th>
+                    <td>
+                        <input type="text" value={this.state.valueQuantite} onChange={this.handleChangeQuantite.bind(this)} />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label>
+                            Information:
+                        </label>
+                    </th>
+                    <td>
+                        <input type="text" value={this.state.valueInformation} onChange={this.handleChangeInformation.bind(this)} />
+                    </td>
+                </tr>
                 <br/>
                 <input type="submit" value="Submit" />
             </form>
