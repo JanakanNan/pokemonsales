@@ -14,17 +14,7 @@ class DashBoardComponent extends Component {
             <div>
                 <CarouselComponent/>
                 <div className="hot-sales-container">
-                    <Row>
-                        <Col xs={12} md={4}>
-                            <HotSalesComponent/>
-                        </Col>
-                        <Col xs={12} md={4}>
-                            <HotSalesComponent/>
-                        </Col>
-                        <Col xs={12} md={4}>
-                            <HotSalesComponent/>
-                        </Col>
-                    </Row>
+                    <HotSalesComponent/>
                     <div className={"dash-Item"}>
                         <Row>
                             <h2>Nouveautés</h2>

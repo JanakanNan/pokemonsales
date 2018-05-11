@@ -218,7 +218,7 @@ button.cart{
 @media(orientation: landscape){
     .hot-sales img{
         height: 100%;
-        opacity: 0.8;
+        opacity: 0.5;
         position: absolute;
     }
 }

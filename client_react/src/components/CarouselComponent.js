@@ -16,7 +16,7 @@ class CarouselComponent extends Component {
                         <img responsive="true" alt="900x500" height={150} src="/img/waterPoke.png" />
                         <Carousel.Caption>
                             <h2>Partez à l'aventure</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Sur terre ou en mer, soyez parrés à toute éventuallité avec nos kits de survie.</p>
                         </Carousel.Caption>
                     </CarouselItem>
                     {/*END TODO*/}
