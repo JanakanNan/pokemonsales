@@ -60,7 +60,7 @@ class ItemformComponent extends React.Component {
                 <br/>
                 <label>
                     Photo:
-                    <input type="text" value={this.state.valuePhoto} onChange={this.handleChangePhoto.bind(this)} />
+                    <input type="file" value={this.state.valuePhoto} onChange={this.handleChangePhoto.bind(this)} />
                 </label>
                 <br/>
                 <label>

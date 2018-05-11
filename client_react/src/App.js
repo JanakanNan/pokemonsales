@@ -19,9 +19,9 @@ class App extends Component {
 			<NavBarComponent/>
 			<BrowserRouter>
 				<div>
-					<Route path="/home" component={DashboardComponent} exact={false} strict={false}/>
+					<Route path="/" component={DashboardComponent} exact={true} strict={true}/>
 					<Route path="/profile" component={ItemformComponent} exact={true} strict={true}/>
-					<Route path="/boutique" component={ItemComponent} exact={false} strict={false}/>
+					<Route path="/boutique" component={ItemComponent} exact={false} strict={true}/>
 				</div>
 			</BrowserRouter>
 			<FooterComponent/>

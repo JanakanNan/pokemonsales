@@ -254,8 +254,8 @@ button.cart{
 }
 
 @media screen and (max-width: 640px){
-    .dash-Item{
-        display: none;
+    .dash-Item .panel{
+        margin-bottom: 2em;
     }
 }
 
