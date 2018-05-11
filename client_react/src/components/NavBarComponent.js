@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { Navbar, Nav, NavItem,FormGroup,FormControl, Button, Glyphicon } from 'react-bootstrap';
 
 import Login from './Login';
+import ItemsList from './ItemsList';
+
 
 
 class NavBarComponent extends Component {
@@ -16,6 +18,10 @@ class NavBarComponent extends Component {
                       tasks_ongoing: [],
                       tasks_completed:[]
         	};
+        }
+
+        updateSearch(event){
+          this.setState({search: event.target.value.substr(0,20)});
         }
 
         updateLoginInfo(user, token){
@@ -44,41 +50,10 @@ class NavBarComponent extends Component {
         </div>
         return (
             <div>
-            <Navbar>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <a href="#Home">Pokebuy</a>
-                    </Navbar.Brand>
-                </Navbar.Header>
-                <Navbar.Form pullLeft>
-                    <FormGroup>
-                        <FormControl type="text" placeholder="Search" />
-                    </FormGroup>{' '}
-                    <Button type="submit">Submit</Button>
-                </Navbar.Form>
-                <Nav pullRight>
-                    <NavItem eventKey={1} href='#'>
-                        Shop
-                    </NavItem>
-                    <NavItem eventKey={1} href='/profile'>
-                        Profile
-                    </NavItem>
-                    <NavItem eventKey={1} href='#'>
-                        Caddie
-                    </NavItem>
-                    <NavItem eventKey={1} href='#'>
-                      {main_content}
-                    </NavItem>
-                </Nav>
-            </Navbar>
-
             <div className="navbar fluid">
                 <div className="red-bar">
                     <Navbar.Form pullLeft>
-                        <FormGroup>
-                            <FormControl type="text" placeholder="Search" />
-                        </FormGroup>{' '}
-                        <Button type="submit">Submit</Button>
+                      <ItemsList/>
                     </Navbar.Form>
                     <button className="cart">
                         <Glyphicon glyph={"shopping-cart"}/>
